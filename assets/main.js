@@ -18,14 +18,13 @@ if('IntersectionObserver' in window){
 
 // scroll story: the screen follows the step in the middle of the window
 const steps=[...$('.steps li')],screens=[...$('.screens img')],meter=document.querySelector('.meter b');
-const bar=document.querySelector('.progress'),top_=document.querySelector('.totop');
+const bar=document.querySelector('.progress');
 const navLinks=[...links.querySelectorAll(':scope>a')];
 let tick=false;
 const onScroll=()=>{
   tick=false;
   const max=document.documentElement.scrollHeight-innerHeight;
   bar.style.transform=`scaleX(${max?scrollY/max:0})`;
-  top_.classList.toggle('show-top',scrollY>900);
   const mid=innerHeight/2;
   let on=0;steps.forEach((s,i)=>{if(s.getBoundingClientRect().top<mid)on=i});
   steps.forEach((s,i)=>s.classList.toggle('on',i===on));

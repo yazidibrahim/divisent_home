@@ -130,8 +130,6 @@ td[data-h]::before{content:attr(data-h);display:block;font-size:11px;font-weight
 .foot .brand{gap:10px}.foot .brand .tile{height:30px}.foot .brand .word{height:30px}
 .progress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:60;background:linear-gradient(90deg,#2f6bff,#8fb2ff);transform-origin:0 50%;transform:scaleX(0)}
 .links a.active{color:var(--accent)}
-.totop{position:fixed;right:20px;bottom:20px;z-index:40;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:#fff;border:1px solid rgba(255,255,255,.35);text-decoration:none;font-size:20px;box-shadow:var(--shadow);opacity:0;visibility:hidden;transform:translateY(12px);transition:.3s}
-.totop.show-top{opacity:1;visibility:visible;transform:none}
 .story-grid{display:grid;grid-template-columns:.8fr 1.4fr;gap:60px;align-items:start}
 .steps{list-style:none;margin:0;padding:0}
 .steps li{min-height:62vh;display:flex;flex-direction:column;justify-content:center;border-left:3px solid var(--line);padding-left:28px;opacity:.28;transition:opacity .4s,border-color .4s}
