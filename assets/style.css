@@ -128,3 +128,4 @@ td[data-h]::before{content:attr(data-h);display:block;font-size:11px;font-weight
 @media(max-width:600px){.chip{padding:8px 10px;gap:8px}.chip i{width:26px;height:26px}.chip span{display:none}}
 @media(prefers-reduced-motion:reduce){.chip{animation:none}}
 .brand img{height:30px;width:auto}.foot .brand img{height:26px}
+.foot .brand{gap:10px}.foot .brand .tile{height:30px}.foot .brand .word{height:30px}
