@@ -68,8 +68,11 @@ h2{font-size:clamp(28px,3.6vw,44px);font-weight:800;color:var(--navy)}h3{font-si
 .stack-shots{display:grid}.stack-shots .frame:first-child{width:88%}.stack-shots .frame:last-child{width:76%;justify-self:end;margin-top:-22%;position:relative}
 .phones{display:flex;gap:24px;justify-content:center;align-items:flex-start}.phones .phone{width:230px}.phones .low{margin-top:48px}
 
-.dir{columns:5 200px;column-gap:18px;margin-top:40px}
-.dir article{break-inside:avoid;background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:18px}
+.dir{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:40px}
+@media(max-width:1100px){.dir{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.dir{grid-template-columns:repeat(2,1fr);gap:12px}}
+@media(max-width:480px){.dir{grid-template-columns:1fr}}
+.dir article{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}
 .dir h3{font-size:15.5px;padding-bottom:10px;border-bottom:2px solid var(--accent);margin-bottom:8px}
 .dir ul{list-style:none;margin:0;padding:0}.dir li{font-size:14px;padding:4px 0;color:#37415c}
 
