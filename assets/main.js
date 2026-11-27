@@ -35,10 +35,13 @@ const onScroll=()=>{
 addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});
 onScroll();
 
-// the hero screenshot leans gently towards the pointer
-const visual=document.querySelector('.visual');
-if(visual&&matchMedia('(pointer:fine) and (prefers-reduced-motion:no-preference)').matches){
-  const f=visual.querySelector('.frame');
-  visual.addEventListener('pointermove',e=>{const r=visual.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;f.style.transform=`perspective(1200px) rotateY(${x*5}deg) rotateX(${-y*5}deg)`});
-  visual.addEventListener('pointerleave',()=>f.style.transform='');
-}
+// hero app launcher
+const launch=document.querySelector('.launch'),opened=document.querySelector('.open'),back=document.querySelector('.back');
+const show=on=>{opened.hidden=!on;back.hidden=!on;launch.hidden=on};
+$('.app').forEach(a=>a.addEventListener('click',()=>{
+  opened.querySelector('b').textContent=a.dataset.name+'.';
+  opened.querySelector('span').textContent=a.dataset.cap.replace('&amp;','&');
+  const i=opened.querySelector('img');i.src=`assets/img/${a.dataset.shot}.webp`;i.alt=a.dataset.name+' screen';
+  show(true);back.focus({preventScroll:true});
+}));
+back.addEventListener('click',()=>show(false));
