@@ -190,3 +190,8 @@ h2{font-size:26px}.lead{font-size:16.5px}
 @media(prefers-reduced-motion:reduce){.launch,.open{animation:none}.ico{transition:none}}
 .d-body{min-height:390px}.hero .lead{max-width:68ch}
 @media(max-width:600px){.hero .btn{white-space:nowrap;padding:12px 6px;font-size:14px}.d-body{min-height:400px}}
+
+/* glass wallpaper, as in the product */
+.hero,.tint,.cta-sec.navy{background:radial-gradient(620px 420px at 8% 0,#a9d8ff,transparent),radial-gradient(620px 420px at 72% 4%,#d6c2ff,transparent),radial-gradient(560px 420px at 4% 100%,#b5f0ee,transparent),radial-gradient(560px 420px at 96% 92%,#ffd3e0,transparent),#eef3fc}
+.d-body{background:radial-gradient(420px 300px at 10% 0,#a9d8ff,transparent),radial-gradient(420px 300px at 85% 0,#d6c2ff,transparent),radial-gradient(380px 280px at 0 100%,#b5f0ee,transparent),radial-gradient(380px 280px at 100% 100%,#ffd3e0,transparent),#e9f0fb}
+.dock,.device,.d-top .co{-webkit-backdrop-filter:blur(22px) saturate(1.5);backdrop-filter:blur(22px) saturate(1.5)}
